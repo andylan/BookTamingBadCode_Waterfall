@@ -11,6 +11,9 @@ public abstract class CityClock {
     protected int cityTime;
     protected UtcTime utcTime;
 
-    public abstract void setUtcZeroTime(int utcZeroTime);
+    public void setUtcZeroTime(int utcZeroTime) {
+        utcTime.setUtcZeroTime(utcZeroTime);
+    }
+
     public abstract void updateCityTime(int utcZeroTime);
 }
