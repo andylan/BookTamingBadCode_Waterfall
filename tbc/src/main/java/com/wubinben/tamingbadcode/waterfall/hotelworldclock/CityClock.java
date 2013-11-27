@@ -9,7 +9,7 @@ package com.wubinben.tamingbadcode.waterfall.hotelworldclock;
  */
 public abstract class CityClock {
     protected int cityTime;
-    protected UtcTime utcTime;
+    protected UtcTime utcTime = new UtcTime();
 
     public void setUtcZeroTime(int utcZeroTime) {
         utcTime.setUtcZeroTime(utcZeroTime);
