@@ -12,11 +12,11 @@ public class MoscowClock extends CityClock {
 
     @Override
     protected int convertCityTimeToUtcZeroTime(int cityTime) {
-        return cityTime - UTC_OFFSET;
+        return keepInRange0To24(cityTime - UTC_OFFSET);
     }
 
     @Override
     public void updateCityTime(int utcZeroTime) {
-        cityTime = utcZeroTime + UTC_OFFSET;
+        cityTime = keepInRange0To24(utcZeroTime + UTC_OFFSET);
     }
 }

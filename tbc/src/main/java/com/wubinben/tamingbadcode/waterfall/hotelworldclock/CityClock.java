@@ -22,4 +22,14 @@ public abstract class CityClock {
     public int getCityTime() {
         return cityTime;
     }
+
+    protected int keepInRange0To24(int hour) {
+        if (hour < 0) {
+            return hour + 24;
+        }
+        if (hour > 24) {
+            return hour - 24;
+        }
+        return hour;
+    }
 }
