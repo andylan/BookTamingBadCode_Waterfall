@@ -11,6 +11,11 @@ public class BeijingClock extends CityClock {
     private static final int UTC_OFFSET = 8;
 
     @Override
+    protected int convertCityTimeToUtcZeroTime(int cityTime) {
+        return cityTime - UTC_OFFSET;
+    }
+
+    @Override
     public void updateCityTime(int utcZeroTime) {
         cityTime = utcZeroTime + UTC_OFFSET;
     }
