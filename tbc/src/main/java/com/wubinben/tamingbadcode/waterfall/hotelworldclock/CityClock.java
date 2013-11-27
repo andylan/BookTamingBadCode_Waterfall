@@ -16,4 +16,8 @@ public abstract class CityClock {
     }
 
     public abstract void updateCityTime(int utcZeroTime);
+
+    public int getCityTime() {
+        return cityTime;
+    }
 }
