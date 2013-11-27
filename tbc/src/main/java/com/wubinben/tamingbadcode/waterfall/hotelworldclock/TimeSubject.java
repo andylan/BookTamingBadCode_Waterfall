@@ -21,4 +21,12 @@ public abstract class TimeSubject {
     }
 
     public abstract void notifyAllCityClocks();
+
+    public static CityClock getCityClock(String cityName) {
+        if (cityClocks.keySet().contains(cityName)) {
+            return cityClocks.get(cityName);
+        }
+        throw new IllegalStateException("The city name " + cityName + " does not exist.");
+
+    }
 }
